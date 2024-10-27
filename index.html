@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CherrySmaker - Inicio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <h1>CherrySmaker</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="hombre.html">Hombre</a>
+            <a href="mujer.html">Mujer</a>
+            <a href="ninios.html">Niños</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="carrito.html" class="carrito-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </a>
+        </nav>
+    </header>
+
+    <section class="new-collection-section">
+      <h2>Nueva Colección</h2>
+      <p>Explora nuestra última colección, donde cada prenda ha sido diseñada pensando en la moda moderna y funcional. Desde piezas clásicas hasta las tendencias más actuales, nuestra nueva colección es el equilibrio perfecto entre elegancia y confort.</p>
+      <button class="btn-view-more">Ver Más</button>
+  </section>
+
+
+   <!-- Carrusel de fotos -->
+   <section class="carousel">
+    <div class="carousel-images">
+        <img src="imgs/carrousel4.jpg" alt="Imagen 1" class="active">
+        <img src="imgs/carrousel5.jpg" alt="Imagen 2">
+        <img src="imgs/carrousel6.jpg" alt="Imagen 3">
+    </div>
+    <button class="carousel-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="carousel-btn next" onclick="changeSlide(1)">&#10095;</button>
+</section>
+
+
+<section class="about-section">
+  <h2>Sobre Nosotros</h2>
+  <p>CherrySmaker nació de la pasión por el estilo único y la calidad superior. Comenzamos como un pequeño proyecto entre amigos que compartían el amor por la moda urbana y contemporánea. Desde nuestro primer día, nos comprometimos a crear piezas exclusivas que combinan comodidad, diseño y una actitud audaz. Hoy, CherrySmaker es una marca que inspira a personas de todas las edades a expresar su verdadero estilo y personalidad a través de nuestras colecciones.</p>
+</section>
+
+
+<footer class="footer">
+  <div class="footer-content">
+      <p class="footer-logo">CherrySmaker</p>
+      <p>&copy; 2023 CherrySmaker. Todos los derechos reservados.</p>
+      <div class="social-links">
+          <a href="https://www.instagram.com" target="_blank" class="social-icon">
+              <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com" target="_blank" class="social-icon">
+              <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://www.linkedin.com" target="_blank" class="social-icon">
+              <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://www.pinterest.com" target="_blank" class="social-icon">
+              <i class="fab fa-pinterest"></i>
+          </a>
+      </div>
+  </div>
+</footer>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="productos.js"></script>
+    <script src="script.js"></script>
+    <script src="carrusel.js"></script>
+</body>
+</html>

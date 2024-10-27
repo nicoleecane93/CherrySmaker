@@ -1,0 +1,463 @@
+/* Importar las fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Tourney:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+/* Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Colores y tipografía */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+main {
+  flex: 1;
+}
+
+
+h1, h2, .section-title, .logo {
+    font-family: 'Tourney', cursive; /* Fuente llamativa para los títulos */
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+header .logo {
+    font-size: 2em;
+    color: #222;
+    letter-spacing: 1px;
+}
+
+/* Navegación */
+.nav {
+    display: flex;
+    gap: 30px;
+}
+
+ a {
+    font-family: 'Tourney', cursive;
+    font-size: 1em;
+    color: #222;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 8px;
+    position: relative;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 2px;
+    background-color: #222;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+
+.nav a:hover {
+    color: #555;
+    transform: translateY(-2px);
+}
+
+.nav a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Carrusel */
+.carousel {
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 70vh;
+    margin: 30px auto;
+    background-color: #e9e9e9;
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+    border-radius: 8px;
+}
+
+.carousel-images img.active {
+    display: block;
+}
+
+/* Botones de carrusel */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(50, 50, 50, 0.6);
+    color: white;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.carousel-btn.prev {
+    left: 20px;
+}
+
+.carousel-btn.next {
+    right: 20px;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(50, 50, 50, 0.8);
+}
+
+/* Título y texto de introducción */
+.section-title {
+    text-align: center;
+    font-size: 2.5em;
+    color: #222;
+    margin-top: 40px;
+}
+
+.intro-text {
+    text-align: center;
+    font-size: 1.1em;
+    margin: 10px 0 50px;
+    color: #666;
+}
+
+/* Contenedor de productos */
+.productos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 30px 20px;
+    background-color: #f4f4f4;
+}
+
+/* Tarjetas de producto */
+.card {
+    flex: 1 1 250px;
+    max-width: 250px;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-family: 'Tourney', cursive;
+    font-size: 1.3em;
+    color: #333;
+    margin: 15px 0;
+}
+
+.card p {
+    font-size: 1em;
+    color: #777;
+    margin: 10px 0;
+}
+
+/* Contador de cantidad en productos */
+.counter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.counter-container button {
+    background-color: #555;
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    padding: 5px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.counter-container button:hover {
+    background-color: #333;
+}
+
+.counter-container span {
+    font-size: 1.2em;
+    margin: 0 10px;
+}
+
+/* Botones generales */
+button, .submit-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 4px;
+}
+
+button:hover, .submit-button:hover {
+    background-color: #555;
+}
+
+
+/* Carrito */
+#carrito {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 650px;
+    margin: auto;
+    text-align: left;
+}
+
+.carrito-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.carrito-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 6px;
+    margin-right: 15px;
+}
+
+/* Total del Carrito */
+#total {
+    font-size: 1.4em;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Formulario de Contacto */
+.contact-form {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+    font-family: 'Tourney', cursive;
+    font-size: 1.1em;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1em;
+    color: #333;
+    background-color: #fafafa;
+    transition: border-color 0.3s;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #888;
+    background-color: #fff;
+}
+
+.contact-form .submit-button {
+    background-color: #333;
+    color: white;
+    font-size: 1.1em;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    text-align: center;
+}
+
+.contact-form .submit-button:hover {
+    background-color: #555;
+}
+
+
+/* Footer */
+.footer {
+  background-color: #c2bebe;
+  color: #f9f9f9;
+  padding: 20px 10px;
+  text-align: center;
+  font-family: 'Lato', sans-serif;}
+
+  .footer-content {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo {
+  font-family: 'Tourney', cursive;
+  font-size: 1.8em;
+  color: #161616;
+}
+
+.footer p {
+  font-size: 0.9em;
+  color: #292828;
+}
+
+/* Redes sociales */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-links a {
+  color: #f9f9f9;
+  font-size: 1.5em;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #ddd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-content {
+      gap: 15px;
+  }
+
+  .footer-logo {
+      font-size: 1.5em;
+  }
+
+  .footer p {
+      font-size: 0.8em;
+  }
+
+  .social-links a {
+      font-size: 1.2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-content {
+      padding: 0 15px;
+  }
+
+  .footer-logo {
+      font-size: 1.2em;
+  }
+
+  .footer p {
+      font-size: 0.75em;
+  }
+
+  .social-links a {
+      font-size: 1em;
+  }
+}
+
+/* Sección de Sobre Nosotros */
+.about-section, .new-collection-section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.about-section h2, .new-collection-section h2 {
+  font-family: 'Tourney', cursive;
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.about-section p, .new-collection-section p {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Botón Ver Más */
+.btn-view-more {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Lato', sans-serif;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-view-more:hover {
+  background-color: #555;
+  transform: scale(1.05);
+}
